@@ -1,0 +1,22 @@
+{
+  "name": "p3_massey_melanie",
+  "version": "1.0.0",
+  "description": "Mon travail pour le projet 3 Ohmyfood! du cursus Développeur Front End d'OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naniiiiiie/MelanieMassey_3_06092021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+
+  "bugs": {
+    "url": "https://github.com/Naniiiiiie/MelanieMassey_3_06092021/issues"
+  },
+  "homepage": "https://github.com/Naniiiiiie/MelanieMassey_3_06092021#readme"
+}
