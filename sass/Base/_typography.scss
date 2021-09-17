@@ -1,0 +1,18 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-family: 'Shrikhand';
+    font-weight: inherit;
+    text-align: center;
+}
+
+p{
+    font-style: normal; /*pas pris en compte*/
+}
+
+.location__explore--search{
+    color: $button-white;
+    font-weight: bold;
+}
