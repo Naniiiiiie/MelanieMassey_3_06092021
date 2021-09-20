@@ -8,7 +8,7 @@
         "../sass/Base/_typography.scss",
         "../sass/Layout/_header.scss",
         "../sass/Layout/_location.scss",
-        "../sass/Layout/_fonctionnement.scss"
+        "../sass/Layout/_how.scss"
     ],
     "names": [],
     "file": "main.css"

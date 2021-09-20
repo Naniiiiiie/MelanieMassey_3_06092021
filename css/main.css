@@ -93,7 +93,7 @@ h1 {
   border-radius: 25px;
 }
 
-.fct {
+.how {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 85%;
@@ -104,7 +104,7 @@ h1 {
   counter-reset: section;
 }
 
-.fct__step {
+.how__step {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,15 +117,15 @@ h1 {
   border-radius: 20px;
 }
 
-.fct__step > i {
+.how__step > i {
   margin-right: 20px;
 }
 
-.fct__step > p {
+.how__step > p {
   font-weight: bold;
 }
 
-.fct__step::before {
+.how__step::before {
   counter-increment: section;
   content: counter(section);
 }
