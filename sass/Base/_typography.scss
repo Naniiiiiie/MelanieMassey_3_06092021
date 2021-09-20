@@ -8,11 +8,12 @@ h1{
     text-align: center;
 }
 
-p{
-    font-style: normal; /*pas pris en compte*/
+.location__explore--search{
+    color: $main-white;
+    font-weight: bold;
 }
 
-.location__explore--search{
-    color: $button-white;
+.restos__card--new{
     font-weight: bold;
+    /*Définir la couleur vert foncé avec nuances*/
 }

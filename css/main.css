@@ -1,3 +1,13 @@
+@charset "UTF-8";
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -19,14 +29,14 @@ h1 {
   text-align: center;
 }
 
-p {
-  font-style: normal;
-  /*pas pris en compte*/
-}
-
 .location__explore--search {
   color: #fff;
   font-weight: bold;
+}
+
+.restos__card--new {
+  font-weight: bold;
+  /*Définir la couleur vert foncé avec nuances*/
 }
 
 h1 {
@@ -128,5 +138,53 @@ h1 {
 .how__step::before {
   counter-increment: section;
   content: counter(section);
+}
+
+.restos {
+  width: 100%;
+  background-color: #F2F2F2;
+}
+
+.restos__card {
+  display: block;
+}
+
+.restos__card--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  background-color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.restos__card--preview {
+  position: relative;
+  width: 90%;
+  height: 250px;
+}
+
+.restos__card--new {
+  background-color: #99E2D0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+}
+
+.restos__card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 /*# sourceMappingURL=main.css.map */
