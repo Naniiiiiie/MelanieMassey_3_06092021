@@ -6,30 +6,31 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-top: 3px solid $dark-grey;
+        border-top: 4px solid $dark-grey;
         background-color: $medium-grey;
-            i{
-                margin-right: 20px;
-            }
-            p{
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
+        i{
+            margin-right: 30px;
         }
+        p{
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    }
     &__explore{
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: $light-grey;
-        padding: 45px 30px 45px 30px;
-        >h2{
-            margin: 0;
+        padding: 70px;
+        h2, p{
+            text-align: center;
         }
         &--search{
-            background-color: $primary-color;
-            padding: 15px;
+            background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
+            padding: 40px 60px;
+            margin: 50px;
             border: none;
-            border-radius: 25px;
+            border-radius: 75px;
         }
     }
 }
