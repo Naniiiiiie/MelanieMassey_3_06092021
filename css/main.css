@@ -26,7 +26,7 @@ body {
 h1 {
   font-family: 'Shrikhand';
   font-weight: inherit;
-  text-align: center;
+  font-size: 70px;
 }
 
 .location__explore--search {
@@ -40,7 +40,13 @@ h1 {
 }
 
 h1 {
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px;
 }
 
 .location {
@@ -145,6 +151,17 @@ h1 {
   background-color: #F2F2F2;
 }
 
+.restos__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90%;
+      grid-template-columns: 90%;
+  grid-row-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .restos__card {
   display: block;
 }
@@ -159,7 +176,6 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
   background-color: #fff;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -167,8 +183,6 @@ h1 {
 
 .restos__card--preview {
   position: relative;
-  width: 90%;
-  height: 250px;
 }
 
 .restos__card--new {
