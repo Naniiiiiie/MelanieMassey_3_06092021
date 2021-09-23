@@ -13,6 +13,11 @@ h2{
    font-weight: 800;
 }
 
+h3{
+    font-size: 45px;
+    font-weight: 800;
+}
+
 p{
     font-size: 45px;
     font-weight: 300;
@@ -39,6 +44,11 @@ p{
 }
 
 .restos__card--new{
-    font-weight: bold;
-    /*Définir la couleur vert foncé avec nuances*/
+    font-size: 35px;
+    font-weight: 700;
+    color: darken($tertiary-color, 35%)
+}
+
+.restos__card--info p{
+    font-weight: 400;
 }
