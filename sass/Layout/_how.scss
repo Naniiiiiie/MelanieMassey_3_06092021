@@ -1,25 +1,37 @@
 .how{
     display: grid;
     grid-template-columns: 85%;
+    grid-gap: 50px;
     justify-content: center;
-    counter-reset: section;
+    margin: 70px 0 70px 0;
     &__step{
         display: flex;
         align-items: center;
+        height: 200px;
+        width: 97%;
         padding: 10px;
-        margin: 5px 0 5px 0;
+        margin-left: 30px;
         background-color: $light-grey;
-        border-radius: 20px;
+        border-radius: 65px;
+        &--listnb{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-color;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            margin-left: -30px;
+        }
     }
     &__step > i{
-        margin-right: 20px;
+        margin-right: 50px;
+        margin-left: 50px;
+        font-size: 50px;
+        color: darken($dark-grey, 30%);
     }
     &__step > p{
         font-weight: bold;
-    }
-    &__step::before{
-        counter-increment: section;
-        content: counter(section);
     }
 }
 

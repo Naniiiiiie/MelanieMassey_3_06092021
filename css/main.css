@@ -53,6 +53,11 @@ p {
   font-weight: 500;
 }
 
+.how__step--listnb {
+  font-size: 35px;
+  color: #fff;
+}
+
 .location__explore--search {
   color: #fff;
   font-size: 40px;
@@ -141,10 +146,11 @@ h1 {
   display: grid;
   -ms-grid-columns: 85%;
       grid-template-columns: 85%;
+  grid-gap: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  counter-reset: section;
+  margin: 70px 0 70px 0;
 }
 
 .how__step {
@@ -154,23 +160,40 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 200px;
+  width: 97%;
   padding: 10px;
-  margin: 5px 0 5px 0;
+  margin-left: 30px;
   background-color: #F2F2F2;
-  border-radius: 20px;
+  border-radius: 65px;
+}
+
+.how__step--listnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9356DC;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-left: -30px;
 }
 
 .how__step > i {
-  margin-right: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 50px;
+  color: #747474;
 }
 
 .how__step > p {
   font-weight: bold;
-}
-
-.how__step::before {
-  counter-increment: section;
-  content: counter(section);
 }
 
 .restos {
