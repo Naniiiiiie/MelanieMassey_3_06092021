@@ -1,0 +1,23 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    background: $footer;
+    padding: 30px;
+    color: #fff;
+    h4{
+        margin-bottom: 20px;
+    }
+    nav div{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        a i{
+            font-size: 30px;
+            margin-right: 20px;
+        }
+    }
+
+    .footer__iconlink{
+        display: flex;
+        align-items: center;
+    }
+}

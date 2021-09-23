@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 * {
@@ -47,6 +47,12 @@ h3 {
   font-weight: 800;
 }
 
+h4 {
+  font-family: 'Shrikhand';
+  font-weight: inherit;
+  font-size: 50px;
+}
+
 p {
   font-size: 45px;
   font-weight: 300;
@@ -80,6 +86,10 @@ p {
 
 .restos__card--info p {
   font-weight: 400;
+}
+
+footer nav div a {
+  font-size: 40px;
 }
 
 h1 {
@@ -215,6 +225,7 @@ h1 {
   width: 100%;
   background-color: #f6f6f6;
   padding-top: 70px;
+  padding-bottom: 150px;
 }
 
 .restos__grid {
@@ -280,5 +291,41 @@ h1 {
   right: 30px;
   padding: 15px 30px;
   border-radius: 5px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #353535;
+  padding: 30px;
+  color: #fff;
+}
+
+footer h4 {
+  margin-bottom: 20px;
+}
+
+footer nav div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+footer nav div a i {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+footer .footer__iconlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

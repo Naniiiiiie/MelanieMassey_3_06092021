@@ -18,6 +18,12 @@ h3{
     font-weight: 800;
 }
 
+h4{
+    font-family: 'Shrikhand';
+    font-weight: inherit;
+    font-size: 50px;
+}
+
 p{
     font-size: 45px;
     font-weight: 300;
@@ -51,4 +57,8 @@ p{
 
 .restos__card--info p{
     font-weight: 400;
+}
+
+footer nav div a{
+    font-size: 40px;
 }
