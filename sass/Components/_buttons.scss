@@ -1,0 +1,14 @@
+.location__explore--search{
+    @include button;
+}
+
+.menu__button{
+    display: flex;
+    justify-content: center;
+}
+#menu__button--order{
+    @include button;
+    padding: 40px 100px;
+    margin: 100px 0;
+    justify-content: center;
+}

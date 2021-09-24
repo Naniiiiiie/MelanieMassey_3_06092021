@@ -6,3 +6,24 @@
     background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
 }
 
+@mixin button{
+    @include gradient-bckgd;
+    @include shadow;
+    padding: 40px 60px;
+    margin: 50px;
+    border: none;
+    border-radius: 75px;
+    color: $main-white;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+@mixin heart-size{
+    font-size: 60px;
+}
+
+@mixin mini-border{
+    width: 10%;
+    border-bottom: 7px solid $tertiary-color;
+    margin-bottom: 30px;
+}

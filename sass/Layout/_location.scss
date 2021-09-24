@@ -25,12 +25,5 @@
         h2, p{
             text-align: center;
         }
-        &--search{
-            @include gradient-bckgd;
-            padding: 40px 60px;
-            margin: 50px;
-            border: none;
-            border-radius: 75px;
-        }
     }
 }

@@ -13,9 +13,28 @@ h2{
    font-weight: 800;
 }
 
+.menu__courses h2{
+    font-size: 40px;
+    font-weight: 300;
+}
+
 h3{
     font-size: 45px;
     font-weight: 800;
+}
+
+.menu__courses--card{
+    h3{
+        font-weight: 600;
+    }
+    p{
+        font-size: 40px;
+        font-weight: 400;
+    }
+    span{
+        font-size: 40px;
+        font-weight: 800;
+    }
 }
 
 h4{
@@ -42,12 +61,6 @@ p{
 .how__step--listnb{
     font-size: 35px;
     color: $main-white;
-}
-
-.location__explore--search{
-    color: $main-white;
-    font-size: 40px;
-    font-weight: 500;
 }
 
 .restos__card--new{

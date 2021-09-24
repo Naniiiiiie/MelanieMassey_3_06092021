@@ -29,7 +29,7 @@
             border-bottom-right-radius: 40px;
             padding: 30px;
             i{
-                font-size: 60px;
+                @include heart-size;
                 padding-right: 50px;
             }
             .full-heart{
