@@ -1,9 +1,9 @@
-footer{
+.footer{
     display: flex;
     flex-direction: column;
-    background: $footer;
-    padding: 30px;
+    background-color: $footer;
     color: #fff;
+    padding: 50px;
     h4{
         margin-bottom: 20px;
     }

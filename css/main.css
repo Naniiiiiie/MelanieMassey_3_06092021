@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 
 * {
@@ -51,6 +51,7 @@ h4 {
   font-family: 'Shrikhand';
   font-weight: inherit;
   font-size: 50px;
+  color: #fff;
 }
 
 p {
@@ -88,8 +89,9 @@ p {
   font-weight: 400;
 }
 
-footer nav div a {
+.footer a {
   font-size: 40px;
+  color: #fff;
 }
 
 h1 {
@@ -293,7 +295,7 @@ h1 {
   border-radius: 5px;
 }
 
-footer {
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,26 +303,26 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #353535;
-  padding: 30px;
+  background-color: #353535;
   color: #fff;
+  padding: 50px;
 }
 
-footer h4 {
+.footer h4 {
   margin-bottom: 20px;
 }
 
-footer nav div {
+.footer nav div {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-footer nav div a i {
+.footer nav div a i {
   font-size: 30px;
   margin-right: 20px;
 }
 
-footer .footer__iconlink {
+.footer .footer__iconlink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
