@@ -28,13 +28,8 @@
             border-bottom-left-radius: 40px;
             border-bottom-right-radius: 40px;
             padding: 30px;
-            i{
-                @include heart-size;
-                padding-right: 50px;
-            }
-            .full-heart{
-                display: none;
-            }
+            position: relative;
+            
         }
         &--preview{
             position: relative;
@@ -46,6 +41,7 @@
             right: 30px;
             padding: 15px 30px;
             border-radius: 5px;
+            
         }
     }
 }

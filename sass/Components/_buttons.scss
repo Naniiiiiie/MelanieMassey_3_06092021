@@ -30,6 +30,45 @@
 #menu__button--order{
     @include button;
     padding: 40px 100px;
-    margin: 100px 0;
+    margin: 100px 0 0 0;
     justify-content: center;
 }
+
+.restos__card--heart{
+    @include heart-size;
+    padding-right: 50px;
+    &:hover{
+        .fas{
+            opacity: 1;
+        }
+        .far{
+            opacity: 0;
+        }
+        
+    }
+    > .far, .fas{
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+    > .far{
+        transition: opacity, 1000ms;
+    }
+    > .fas{
+        background: linear-gradient(180deg, $primary-color, $secondary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        transition: opacity, 1000ms;
+    }
+
+}
+
+
+
+
+/*heart
+background: linear-gradient(180deg, $primary-color, $secondary-color);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+*/

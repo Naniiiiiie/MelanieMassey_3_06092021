@@ -18,6 +18,7 @@ body {
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
+  background: #f6f6f6;
 }
 
 h2 {
@@ -125,6 +126,7 @@ p {
   color: #fff;
   font-size: 40px;
   font-weight: 500;
+  cursor: pointer;
   position: relative;
   z-index: 1;
 }
@@ -172,16 +174,57 @@ p {
   color: #fff;
   font-size: 40px;
   font-weight: 500;
+  cursor: pointer;
   padding: 40px 100px;
-  margin: 100px 0;
+  margin: 100px 0 0 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
+.restos__card--heart {
+  font-size: 60px;
+  padding-right: 50px;
+}
+
+.restos__card--heart:hover .fas {
+  opacity: 1;
+}
+
+.restos__card--heart:hover .far {
+  opacity: 0;
+}
+
+.restos__card--heart > .far, .restos__card--heart .fas {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+
+.restos__card--heart > .far {
+  -webkit-transition: opacity, 1000ms;
+  transition: opacity, 1000ms;
+}
+
+.restos__card--heart > .fas {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(180deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  -webkit-transition: opacity, 1000ms;
+  transition: opacity, 1000ms;
+}
+
+/*heart
+background: linear-gradient(180deg, $primary-color, $secondary-color);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+*/
 header {
   height: 120px;
   position: relative;
+  background: #fff;
 }
 
 header h1 {
@@ -191,10 +234,10 @@ header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 15px;
+  padding: 15px;
 }
 
-header i {
+header .arrow {
   position: absolute;
   top: 30px;
   left: 60px;
@@ -359,15 +402,7 @@ header i {
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   padding: 30px;
-}
-
-.restos__card--info i {
-  font-size: 60px;
-  padding-right: 50px;
-}
-
-.restos__card--info .full-heart {
-  display: none;
+  position: relative;
 }
 
 .restos__card--preview {
@@ -383,11 +418,6 @@ header i {
   border-radius: 5px;
 }
 
-.coverpic {
-  position: relative;
-  z-index: 1;
-}
-
 .coverpic img {
   width: 100%;
   height: 700px;
@@ -397,13 +427,12 @@ header i {
 
 .menu {
   width: 100%;
-  position: relative;
-  z-index: 2;
   background: #f6f6f6;
-  padding: 80px 30px 40px 30px;
+  padding: 80px 30px 0 30px;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
-  bottom: 100px;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 .menu__title {
