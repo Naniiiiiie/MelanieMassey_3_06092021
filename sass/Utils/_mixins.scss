@@ -6,7 +6,36 @@
     background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
 }
 
+@mixin light-gradient-bckgd{
+    background-image: linear-gradient(to bottom right, $secondary-color-light, $primary-color-light);
+}
+
 @mixin button{
+    @include gradient-bckgd;
+    @include shadow;
+    padding: 40px 60px;
+    margin: 50px;
+    border: none;
+    border-radius: 75px;
+    color: $main-white;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+/*A SUPPRIMER SI FINALEMENT PAS UTILISé!*/
+@mixin light-button{
+    @include light-gradient-bckgd;
+    @include shadow;
+    padding: 40px 60px;
+    margin: 50px;
+    border: none;
+    border-radius: 75px;
+    color: $main-white;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+@mixin button-light{
     @include gradient-bckgd;
     @include shadow;
     padding: 40px 60px;
