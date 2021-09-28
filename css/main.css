@@ -114,6 +114,7 @@ p {
   color: #fff;
 }
 
+/*//ACCUEIL => BOUTON "EXPLORER"//*/
 .location__explore--search {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -127,30 +128,15 @@ p {
   font-size: 40px;
   font-weight: 500;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
 }
 
-.location__explore--search:hover .location__explore--searchbg {
-  opacity: 1;
-}
-
-.location__explore--searchbg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.location__explore--search:hover {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
   background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
-  /*Pourquoi je suis obligée de remettre le border radiuas ici?*/
-  border-radius: 75px;
   -webkit-box-shadow: 7px 10px 40px #b5b5b5;
           box-shadow: 7px 10px 40px #b5b5b5;
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
 }
 
 .menu__button {
