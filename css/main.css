@@ -11,6 +11,7 @@ a {
 /*ANIMATIONS*/
 /*OMBRES*/
 /*GRADIENT BACKGROUNDS*/
+/*APPARITION PROGRESSIVE MENUS*/
 @-webkit-keyframes appear {
   0% {
     -webkit-transform: translateY(10px);
@@ -33,6 +34,42 @@ a {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/*LOADING SPINNER*/
+@-webkit-keyframes dot {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes dot {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes loader--disapear {
+  100% {
+    opacity: 0;
+    z-index: -999;
+  }
+}
+
+@keyframes loader--disapear {
+  100% {
+    opacity: 0;
+    z-index: -999;
   }
 }
 
@@ -237,6 +274,53 @@ p {
   opacity: 0;
   -webkit-transition: opacity, 1000ms;
   transition: opacity, 1000ms;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  opacity: 1;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: loader--disapear 1s both ease 3.5s;
+          animation: loader--disapear 1s both ease 3.5s;
+}
+
+.loader .dot {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: dot 1s both ease-in-out alternate 3;
+          animation: dot 1s both ease-in-out alternate 3;
+}
+
+.loader .dot:nth-child(1) {
+  background-color: #9356DC;
+}
+
+.loader .dot:nth-child(2) {
+  background-color: #FF79DA;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.loader .dot:nth-child(3) {
+  background-color: #99E2D0;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 header {
