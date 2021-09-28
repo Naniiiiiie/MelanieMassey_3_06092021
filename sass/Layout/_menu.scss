@@ -43,3 +43,14 @@
         }
     }
 }
+
+/*ANIMATION APPARITION PROGRESSIVE "APPEAR"*/
+.menu__courses{
+    animation: appear $anim-courses-duration both;
+}
+
+@for $i from 1 through 3{
+    .appear--#{$i} {
+        animation-delay: $anim-courses-delay * $i;
+     }
+}
