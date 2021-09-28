@@ -18,6 +18,7 @@
         justify-content: space-between;
         align-items: center;
         margin: 0px 60px 0 30px;
+        position: relative;
         i{
             @include heart-size;
         }
