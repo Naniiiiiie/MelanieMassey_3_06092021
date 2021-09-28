@@ -1,7 +1,9 @@
+/*OMBRES*/
 @mixin shadow {
     box-shadow: 5px 8px 30px $dark-grey;
 }
 
+/*GRADIENT BACKGROUNDS*/
 @mixin gradient-bckgd{
     background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
 }
@@ -23,30 +25,7 @@
     cursor: pointer;
 }
 
-/*A SUPPRIMER SI FINALEMENT PAS UTILISé!*/
-@mixin light-button{
-    @include light-gradient-bckgd;
-    @include shadow;
-    padding: 40px 60px;
-    margin: 50px;
-    border: none;
-    border-radius: 75px;
-    color: $main-white;
-    font-size: 40px;
-    font-weight: 500;
-}
 
-@mixin button-light{
-    @include gradient-bckgd;
-    @include shadow;
-    padding: 40px 60px;
-    margin: 50px;
-    border: none;
-    border-radius: 75px;
-    color: $main-white;
-    font-size: 40px;
-    font-weight: 500;
-}
 
 @mixin heart-size{
     font-size: 60px;
