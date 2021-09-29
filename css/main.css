@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
@@ -11,32 +12,6 @@ a {
 /*ANIMATIONS*/
 /*OMBRES*/
 /*GRADIENT BACKGROUNDS*/
-/*APPARITION PROGRESSIVE MENUS*/
-@-webkit-keyframes appear {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes appear {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 /*LOADING SPINNER*/
 @-webkit-keyframes dot {
   0% {
@@ -70,6 +45,102 @@ a {
   100% {
     opacity: 0;
     z-index: -999;
+  }
+}
+
+/*APPARITION PROGRESSIVE MENUS*/
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*CHECK BOXE VERTE*/
+@-webkit-keyframes check__container--appear {
+  0% {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes check__container--appear {
+  0% {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes price_slide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+}
+
+@keyframes price_slide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+}
+
+@-webkit-keyframes check__icon--rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes check__icon--rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 
@@ -563,18 +634,25 @@ header .arrow {
 }
 
 .menu__courses--card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #fff;
-  padding: 30px;
+  height: 170px;
+  padding: 30px 0 30px 30px;
   margin: 30px 0;
   border-radius: 40px;
   -webkit-box-shadow: 5px 8px 30px #cecece;
           box-shadow: 5px 8px 30px #cecece;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .menu__courses--card span {
@@ -584,7 +662,54 @@ header .arrow {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-right: 25px;
+  height: 120px;
+  margin-right: 40px;
+}
+
+.menu__courses--card > h3, .menu__courses--card p {
+  /*LINE-CLAMP => tronque le texte à un nb spécifique de lignes*/
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.menu__courses--card .check__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  height: 170px;
+  background: #99E2D0;
+  border-radius: 0 40px 40px 0;
+}
+
+.menu__courses--card .check__container .check__icon {
+  color: #fff;
+  font-size: 50px;
+}
+
+.menu__courses--card:hover .check__container {
+  -webkit-animation: check__container--appear 0.5s both;
+          animation: check__container--appear 0.5s both;
+}
+
+.menu__courses--card:hover .check__icon {
+  -webkit-animation: check__icon--rotate 0.5s;
+          animation: check__icon--rotate 0.5s;
+}
+
+.menu__courses--card:hover span {
+  -webkit-animation: price_slide 0.5s both;
+          animation: price_slide 0.5s both;
 }
 
 /*ANIMATION APPARITION PROGRESSIVE "APPEAR"*/

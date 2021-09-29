@@ -1,15 +1,3 @@
-/*APPARITION PROGRESSIVE MENUS*/
-@keyframes appear{
-    0%{
-        transform: translateY(10px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 /*LOADING SPINNER*/
 @keyframes dot{
     0%{
@@ -23,5 +11,45 @@
     100%{
         opacity: 0;
         z-index: -999;
+    }
+}
+
+/*APPARITION PROGRESSIVE MENUS*/
+@keyframes appear{
+    0%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*CHECK BOXE VERTE*/
+@keyframes check__container--appear{
+    0%{
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes price_slide{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-150px);
+    }
+}
+@keyframes check__icon--rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-360deg);
     }
 }
