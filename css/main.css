@@ -159,6 +159,24 @@ a {
   }
 }
 
+@-webkit-keyframes card_slide {
+  0% {
+    padding-right: 0;
+  }
+  100% {
+    padding-right: 150px;
+  }
+}
+
+@keyframes card_slide {
+  0% {
+    padding-right: 0;
+  }
+  100% {
+    padding-right: 150px;
+  }
+}
+
 @-webkit-keyframes check__icon--rotate {
   0% {
     -webkit-transform: rotate(0);
@@ -568,6 +586,14 @@ header .arrow {
   color: #9356DC;
 }
 
+.how__step:hover {
+  background-color: #f2eafb;
+}
+
+.how__step:hover > i {
+  color: #9356DC;
+}
+
 .how__step > i {
   margin: 0 1.2rem;
   font-size: 1.2rem;
@@ -743,6 +769,11 @@ header .arrow {
 .menu__courses--card .check__container .check__icon {
   color: #fff;
   font-size: 1.5rem;
+}
+
+.menu__courses--card:hover > h3, .menu__courses--card:hover p {
+  -webkit-animation: card_slide 0.5s both;
+          animation: card_slide 0.5s both;
 }
 
 .menu__courses--card:hover > h3, .menu__courses--card:hover p {

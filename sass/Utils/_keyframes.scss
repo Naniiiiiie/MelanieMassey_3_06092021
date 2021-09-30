@@ -53,6 +53,14 @@
         padding-right: 4rem;
     }
 }
+@keyframes card_slide{
+    0%{
+        padding-right: 0;
+    }
+    100%{
+        padding-right: 150px;
+    }
+}
 @keyframes check__icon--rotate{
     0%{
         transform: rotate(0);
