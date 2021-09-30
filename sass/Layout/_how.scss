@@ -25,6 +25,12 @@
             border-radius: 50%;
             margin-left: -40px;
         }
+        &:hover{
+            background-color: lighten($color: $primary-color, $amount: 35);
+            > i{
+                color: $primary-color;
+            }
+        }
     }
     &__step > i{
         margin-right: 50px;

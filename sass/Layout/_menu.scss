@@ -51,8 +51,10 @@
             }
             > h3, p{
                 /*LINE-CLAMP => tronque le texte à un nb spécifique de lignes*/
-                -webkit-line-clamp: 1;
-                
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1; 
+                text-overflow: ellipsis;
                 overflow: hidden;
             }
             .check__container{
@@ -73,6 +75,10 @@
                 }
             }
             &:hover{
+                > h3, p{
+                    animation: card_slide 0.5s both;
+                
+                }
                 .check__container{
                     animation: check__container--appear 0.5s both;
                 }

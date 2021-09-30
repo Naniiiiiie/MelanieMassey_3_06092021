@@ -12,6 +12,10 @@ a {
 /*ANIMATIONS*/
 /*OMBRES*/
 /*GRADIENT BACKGROUNDS*/
+/*BOUTONS*/
+/*COEURS*/
+/*MINI BORDURE PAGES MENUS*/
+/*MEDIAS QUERIES*/
 /*LOADING SPINNER*/
 @-webkit-keyframes dot {
   0% {
@@ -119,6 +123,24 @@ a {
   100% {
     -webkit-transform: translateX(-150px);
             transform: translateX(-150px);
+  }
+}
+
+@-webkit-keyframes card_slide {
+  0% {
+    padding-right: 0;
+  }
+  100% {
+    padding-right: 150px;
+  }
+}
+
+@keyframes card_slide {
+  0% {
+    padding-right: 0;
+  }
+  100% {
+    padding-right: 150px;
   }
 }
 
@@ -517,6 +539,14 @@ header .arrow {
   margin-left: -40px;
 }
 
+.how__step:hover {
+  background-color: #f2eafb;
+}
+
+.how__step:hover > i {
+  color: #9356DC;
+}
+
 .how__step > i {
   margin-right: 50px;
   margin-left: 50px;
@@ -668,7 +698,10 @@ header .arrow {
 
 .menu__courses--card > h3, .menu__courses--card p {
   /*LINE-CLAMP => tronque le texte à un nb spécifique de lignes*/
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
@@ -695,6 +728,11 @@ header .arrow {
 .menu__courses--card .check__container .check__icon {
   color: #fff;
   font-size: 50px;
+}
+
+.menu__courses--card:hover > h3, .menu__courses--card:hover p {
+  -webkit-animation: card_slide 0.5s both;
+          animation: card_slide 0.5s both;
 }
 
 .menu__courses--card:hover .check__container {

@@ -11,7 +11,7 @@
 @mixin light-gradient-bckgd{
     background-image: linear-gradient(to bottom right, $secondary-color-light, $primary-color-light);
 }
-
+/*BOUTONS*/
 @mixin button{
     @include gradient-bckgd;
     @include shadow;
@@ -25,14 +25,31 @@
     cursor: pointer;
 }
 
-
-
+/*COEURS*/
 @mixin heart-size{
     font-size: 60px;
 }
 
+/*MINI BORDURE PAGES MENUS*/
 @mixin mini-border{
     width: 10%;
     border-bottom: 7px solid $tertiary-color;
     margin-bottom: 30px;
+}
+
+/*MEDIAS QUERIES*/
+@mixin tablet-p{
+    @media screen and (min-width: map-get($breakpoints, tablet-p)){
+        @content;
+    }
+}
+@mixin tablet-l{
+    @media screen and (min-width: map-get($breakpoints, tablet-l)){
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
 }
