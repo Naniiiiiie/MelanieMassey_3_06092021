@@ -1,6 +1,6 @@
 /*OMBRES*/
 @mixin shadow {
-    box-shadow: 5px 8px 30px $dark-grey;
+    box-shadow: 5px 5px 10px $medium-grey;
 }
 
 /*GRADIENT BACKGROUNDS*/
@@ -11,28 +11,40 @@
 @mixin light-gradient-bckgd{
     background-image: linear-gradient(to bottom right, $secondary-color-light, $primary-color-light);
 }
-
+/*BOUTONS*/
 @mixin button{
     @include gradient-bckgd;
     @include shadow;
-    padding: 40px 60px;
-    margin: 50px;
+    padding: 1rem 1.5rem;
+    margin: 2rem;
     border: none;
-    border-radius: 75px;
+    border-radius: 1.5rem;
     color: $main-white;
-    font-size: 40px;
     font-weight: 500;
     cursor: pointer;
 }
 
-
-
-@mixin heart-size{
-    font-size: 60px;
-}
-
+/*MINI BORDURE PAGES MENUS*/
 @mixin mini-border{
-    width: 10%;
-    border-bottom: 7px solid $tertiary-color;
-    margin-bottom: 30px;
+    width: 2.5rem;
+    border-bottom: 3px solid $tertiary-color;
+    margin-bottom: 0.5rem;
 }
+
+/*MEDIAS QUERIES
+@mixin tablet-p{
+    @media screen and (min-width: 1024px){
+        @content;
+    }
+}
+@mixin tablet-l{
+    @media screen and (min-width: map-get($breakpoints, tablet-l)){
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+*/

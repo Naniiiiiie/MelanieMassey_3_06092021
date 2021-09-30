@@ -29,7 +29,7 @@
 /*CHECK BOXE VERTE*/
 @keyframes check__container--appear{
     0%{
-        transform: translateX(150px);
+        transform: translateX(4rem);
         opacity: 0;
     }
     100%{
@@ -42,7 +42,15 @@
         transform: translateX(0);
     }
     100%{
-        transform: translateX(-150px);
+        transform: translateX(-4rem);
+    }
+}
+@keyframes card_slide{
+    0%{
+        padding-right: 0;
+    }
+    100%{
+        padding-right: 4rem;
     }
 }
 @keyframes check__icon--rotate{

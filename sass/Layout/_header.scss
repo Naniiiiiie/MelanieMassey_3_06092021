@@ -1,19 +1,20 @@
 header{
-    height: 120px;
+    height: 4.5rem;
     position: relative;
     background: #fff;
     h1{
         display: flex;
         justify-content: center;
-        padding: 15px;
+        padding: 1rem;
     }
 }
 
 header .arrow{
     position: absolute;
-    top: 30px;
-    left: 60px;
-    font-size: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    font-size: 1.3rem;
 }
 
 

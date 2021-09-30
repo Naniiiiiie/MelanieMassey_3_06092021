@@ -12,6 +12,25 @@ a {
 /*ANIMATIONS*/
 /*OMBRES*/
 /*GRADIENT BACKGROUNDS*/
+/*BOUTONS*/
+/*MINI BORDURE PAGES MENUS*/
+/*MEDIAS QUERIES
+@mixin tablet-p{
+    @media screen and (min-width: 1024px){
+        @content;
+    }
+}
+@mixin tablet-l{
+    @media screen and (min-width: map-get($breakpoints, tablet-l)){
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+*/
 /*LOADING SPINNER*/
 @-webkit-keyframes dot {
   0% {
@@ -77,8 +96,8 @@ a {
 /*CHECK BOXE VERTE*/
 @-webkit-keyframes check__container--appear {
   0% {
-    -webkit-transform: translateX(150px);
-            transform: translateX(150px);
+    -webkit-transform: translateX(4rem);
+            transform: translateX(4rem);
     opacity: 0;
   }
   100% {
@@ -89,8 +108,8 @@ a {
 }
 @keyframes check__container--appear {
   0% {
-    -webkit-transform: translateX(150px);
-            transform: translateX(150px);
+    -webkit-transform: translateX(4rem);
+            transform: translateX(4rem);
     opacity: 0;
   }
   100% {
@@ -106,8 +125,8 @@ a {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateX(-4rem);
+            transform: translateX(-4rem);
   }
 }
 
@@ -117,8 +136,26 @@ a {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateX(-4rem);
+            transform: translateX(-4rem);
+  }
+}
+
+@-webkit-keyframes card_slide {
+  0% {
+    padding-right: 0;
+  }
+  100% {
+    padding-right: 4rem;
+  }
+}
+
+@keyframes card_slide {
+  0% {
+    padding-right: 0;
+  }
+  100% {
+    padding-right: 4rem;
   }
 }
 
@@ -147,6 +184,7 @@ a {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
@@ -156,16 +194,7 @@ body {
   background: #f6f6f6;
 }
 
-h2 {
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
-
 .menu__courses h2 {
-  margin-bottom: 10px;
-}
-
-h3 {
   margin-bottom: 10px;
 }
 
@@ -176,52 +205,32 @@ body {
 h1 {
   font-family: 'Shrikhand';
   font-weight: inherit;
-  font-size: 70px;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 70px;
+  font-size: 1.5rem;
   font-weight: 800;
-}
-
-.menu__courses h2 {
-  font-size: 40px;
-  font-weight: 300;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 h3 {
-  font-size: 45px;
-  font-weight: 800;
-}
-
-.menu__courses--card h3 {
-  font-weight: 600;
-}
-
-.menu__courses--card p {
-  font-size: 40px;
-  font-weight: 400;
-}
-
-.menu__courses--card span {
-  font-size: 40px;
+  font-size: 1.1rem;
   font-weight: 800;
 }
 
 h4 {
   font-family: 'Shrikhand';
   font-weight: inherit;
-  font-size: 50px;
+  font-size: 1.1rem;
   color: #fff;
 }
 
 p {
-  font-size: 45px;
   font-weight: 300;
 }
 
 .location__search {
-  font-size: 35px;
   font-weight: 500;
 }
 
@@ -229,13 +238,17 @@ p {
   font-weight: 500;
 }
 
+.location__explore p {
+  font-size: 1.1rem;
+}
+
 .how__step--listnb {
-  font-size: 35px;
+  font-size: 1rem;
   color: #fff;
 }
 
 .restos__card--new {
-  font-size: 35px;
+  font-size: 1rem;
   font-weight: 700;
   color: #2c9c81;
 }
@@ -244,8 +257,38 @@ p {
   font-weight: 400;
 }
 
+.menu h2 {
+  font-family: 'Shrikhand';
+  font-weight: inherit;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.menu h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1.5rem 0 0.4rem 0;
+}
+
+.menu h4 {
+  font-family: 'Roboto';
+  font-weight: 600;
+  color: #000;
+}
+
+.menu p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+.menu span {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
 .footer a {
-  font-size: 40px;
+  font-size: 1rem;
   color: #fff;
 }
 
@@ -253,14 +296,13 @@ p {
 .location__explore--search {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-box-shadow: 5px 8px 30px #cecece;
-          box-shadow: 5px 8px 30px #cecece;
-  padding: 40px 60px;
-  margin: 50px;
+  -webkit-box-shadow: 5px 5px 10px #eaeaea;
+          box-shadow: 5px 5px 10px #eaeaea;
+  padding: 1rem 1.5rem;
+  margin: 2rem;
   border: none;
-  border-radius: 75px;
+  border-radius: 1.5rem;
   color: #fff;
-  font-size: 40px;
   font-weight: 500;
   cursor: pointer;
   -webkit-transition: all 250ms;
@@ -287,18 +329,17 @@ p {
 .menu__button--order {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-box-shadow: 5px 8px 30px #cecece;
-          box-shadow: 5px 8px 30px #cecece;
-  padding: 40px 60px;
-  margin: 50px;
+  -webkit-box-shadow: 5px 5px 10px #eaeaea;
+          box-shadow: 5px 5px 10px #eaeaea;
+  padding: 1rem 1.5rem;
+  margin: 2rem;
   border: none;
-  border-radius: 75px;
+  border-radius: 1.5rem;
   color: #fff;
-  font-size: 40px;
   font-weight: 500;
   cursor: pointer;
-  padding: 40px 100px;
-  margin: 100px 0 0 0;
+  padding: 1rem 3rem;
+  margin: 2rem 0 0 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -313,8 +354,7 @@ p {
 
 /*//BOUTONS COEURS FAVORIS//*/
 .button__heart {
-  font-size: 60px;
-  padding-right: 50px;
+  padding-right: 2rem;
 }
 
 .button__heart:hover .fas {
@@ -326,6 +366,7 @@ p {
 }
 
 .button__heart > .far, .button__heart .fas {
+  font-size: 1.8rem;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -395,7 +436,7 @@ p {
 }
 
 header {
-  height: 120px;
+  height: 4.5rem;
   position: relative;
   background: #fff;
 }
@@ -407,14 +448,16 @@ header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 15px;
+  padding: 1rem;
 }
 
 header .arrow {
   position: absolute;
-  top: 30px;
-  left: 60px;
-  font-size: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 1rem;
+  font-size: 1.3rem;
 }
 
 .location {
@@ -438,17 +481,13 @@ header .arrow {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 4px solid #cecece;
+  border-top: 3px solid #cecece;
   background-color: #eaeaea;
+  padding: 15px;
 }
 
 .location__search i {
-  margin-right: 30px;
-}
-
-.location__search p {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-right: 15px;
 }
 
 .location__explore {
@@ -463,23 +502,27 @@ header .arrow {
       -ms-flex-align: center;
           align-items: center;
   background-color: #f6f6f6;
-  padding: 70px;
+  padding: 1.2rem;
 }
 
 .location__explore h2, .location__explore p {
   text-align: center;
 }
 
+.location__explore h2 {
+  padding: 0 2.5rem;
+}
+
 .how {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 85%;
-      grid-template-columns: 85%;
-  grid-gap: 50px;
+  -ms-grid-columns: 90%;
+      grid-template-columns: 90%;
+  grid-gap: 1.2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 70px 0 150px 0;
+  padding: 1rem 0 4rem 0;
   background: #fff;
 }
 
@@ -490,14 +533,14 @@ header .arrow {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 180px;
-  width: 97%;
-  padding: 10px;
-  margin-left: 30px;
+  height: 5rem;
+  width: 99%;
+  padding: 1rem;
+  margin-left: 0;
   background-color: #f6f6f6;
-  border-radius: 65px;
-  -webkit-box-shadow: 5px 8px 30px #cecece;
-          box-shadow: 5px 8px 30px #cecece;
+  border-radius: 1.2rem;
+  -webkit-box-shadow: 5px 5px 10px #eaeaea;
+          box-shadow: 5px 5px 10px #eaeaea;
 }
 
 .how__step--listnb {
@@ -511,16 +554,23 @@ header .arrow {
       -ms-flex-align: center;
           align-items: center;
   background-color: #9356DC;
-  width: 60px;
-  height: 60px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
-  margin-left: -40px;
+  margin-left: -1.7rem;
+}
+
+.how__step:hover {
+  background-color: #f2eafb;
+}
+
+.how__step:hover > i {
+  color: #9356DC;
 }
 
 .how__step > i {
-  margin-right: 50px;
-  margin-left: 50px;
-  font-size: 50px;
+  margin: 0 1.2rem;
+  font-size: 1.2rem;
   color: #828282;
 }
 
@@ -531,8 +581,7 @@ header .arrow {
 .restos {
   width: 100%;
   background-color: #f6f6f6;
-  padding-top: 70px;
-  padding-bottom: 150px;
+  padding: 1rem 0 4rem 0;
 }
 
 .restos__grid {
@@ -540,7 +589,7 @@ header .arrow {
   display: grid;
   -ms-grid-columns: 90%;
       grid-template-columns: 90%;
-  grid-row-gap: 40px;
+  grid-row-gap: 1.2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -549,17 +598,17 @@ header .arrow {
 .restos__card {
   display: block;
   border-radius: 40px;
-  -webkit-box-shadow: 5px 8px 30px #cecece;
-          box-shadow: 5px 8px 30px #cecece;
+  -webkit-box-shadow: 5px 5px 10px #eaeaea;
+          box-shadow: 5px 5px 10px #eaeaea;
 }
 
 .restos__card img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 450px;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  height: 200px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .restos__card--info {
@@ -573,9 +622,9 @@ header .arrow {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  padding: 30px 50px 30px 30px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 0.9rem;
   position: relative;
 }
 
@@ -594,7 +643,7 @@ header .arrow {
 
 .coverpic img {
   width: 100%;
-  height: 700px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -602,11 +651,11 @@ header .arrow {
 .menu {
   width: 100%;
   background: #f6f6f6;
-  padding: 80px 30px;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
+  padding: 2rem 1rem 0.5rem 1rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
 .menu__title {
@@ -619,18 +668,14 @@ header .arrow {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0px 60px 0 30px;
+  margin: 0;
   position: relative;
 }
 
-.menu__title i {
-  font-size: 60px;
-}
-
 .menu__courses--border {
-  width: 10%;
-  border-bottom: 7px solid #99E2D0;
-  margin-bottom: 30px;
+  width: 2.5rem;
+  border-bottom: 3px solid #99E2D0;
+  margin-bottom: 0.5rem;
 }
 
 .menu__courses--card {
@@ -645,12 +690,12 @@ header .arrow {
       -ms-flex-align: center;
           align-items: center;
   background: #fff;
-  height: 170px;
-  padding: 30px 0 30px 30px;
-  margin: 30px 0;
-  border-radius: 40px;
-  -webkit-box-shadow: 5px 8px 30px #cecece;
-          box-shadow: 5px 8px 30px #cecece;
+  height: 4.5rem;
+  padding: 1rem 0 1rem 1rem;
+  margin: 1rem 0;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px #eaeaea;
+          box-shadow: 5px 5px 10px #eaeaea;
   cursor: pointer;
   overflow: hidden;
 }
@@ -662,13 +707,16 @@ header .arrow {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: 120px;
-  margin-right: 40px;
+  height: 3rem;
+  margin-right: 1rem;
 }
 
 .menu__courses--card > h3, .menu__courses--card p {
   /*LINE-CLAMP => tronque le texte à un nb spécifique de lignes*/
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
@@ -686,15 +734,20 @@ header .arrow {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 150px;
-  height: 170px;
+  width: 4rem;
+  height: 4.5rem;
   background: #99E2D0;
-  border-radius: 0 40px 40px 0;
+  border-radius: 0 15px 15px 0;
 }
 
 .menu__courses--card .check__container .check__icon {
   color: #fff;
-  font-size: 50px;
+  font-size: 1.5rem;
+}
+
+.menu__courses--card:hover > h3, .menu__courses--card:hover p {
+  -webkit-animation: card_slide 0.5s both;
+          animation: card_slide 0.5s both;
 }
 
 .menu__courses--card:hover .check__container {
@@ -743,27 +796,25 @@ header .arrow {
           flex-direction: column;
   background-color: #353535;
   color: #fff;
-  padding: 50px;
+  padding: 1.5rem;
 }
 
-.footer h4 {
-  margin-bottom: 20px;
+.footer nav a {
+  margin: 0.3rem 0;
 }
 
-.footer nav div {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.footer nav div a i {
-  font-size: 30px;
-  margin-right: 20px;
+.footer nav i {
+  font-size: 0.9rem;
+  margin-right: 1rem;
 }
 
 .footer .footer__iconlink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

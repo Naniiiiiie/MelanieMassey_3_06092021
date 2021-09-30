@@ -5,52 +5,32 @@ body {
 h1{
     font-family: 'Shrikhand';
     font-weight: inherit;
-    font-size: 70px;
+    font-size: 2rem;
 }
 
 h2{
-   font-size: 70px;
+   font-size: 1.5rem;
    font-weight: 800;
-}
-
-.menu__courses h2{
-    font-size: 40px;
-    font-weight: 300;
+   margin: 1.5rem 0 0.5rem 0;
 }
 
 h3{
-    font-size: 45px;
+    font-size: 1.1rem;
     font-weight: 800;
-}
-
-.menu__courses--card{
-    h3{
-        font-weight: 600;
-    }
-    p{
-        font-size: 40px;
-        font-weight: 400;
-    }
-    span{
-        font-size: 40px;
-        font-weight: 800;
-    }
 }
 
 h4{
     font-family: 'Shrikhand';
     font-weight: inherit;
-    font-size: 50px;
+    font-size: 1.1rem;
     color: #fff;
 }
 
 p{
-    font-size: 45px;
     font-weight: 300;
 }
 
 .location__search{
-    font-size: 35px;
     font-weight: 500;
 }
 
@@ -58,13 +38,18 @@ p{
     font-weight: 500;
 }
 
+.location__explore p{
+    font-size: 1.1rem;
+    
+}
+
 .how__step--listnb{
-    font-size: 35px;
+    font-size: 1rem;
     color: $main-white;
 }
 
 .restos__card--new{
-    font-size: 35px;
+    font-size: 1rem;
     font-weight: 700;
     color: darken($tertiary-color, 35%)
 }
@@ -73,7 +58,35 @@ p{
     font-weight: 400;
 }
 
+.menu{
+    h2{
+        font-family: 'Shrikhand';
+        font-weight: inherit;
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    h3{
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 1.5rem 0 0.4rem 0;
+    }
+    h4{
+        font-family: 'Roboto';
+        font-weight: 600;
+        color: #000;
+    }
+    p{
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-top: 0.2rem;
+    }
+    span{
+        font-size: 1rem;
+        font-weight: 800;
+    }
+}
+
 .footer a{
-    font-size: 40px;
+    font-size: 1rem;
     color: #fff;
 }

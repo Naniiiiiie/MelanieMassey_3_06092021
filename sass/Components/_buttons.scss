@@ -14,8 +14,8 @@
     justify-content: center;
     &--order{
         @include button;
-        padding: 40px 100px;
-        margin: 100px 0 0 0;
+        padding: 1rem 3rem;
+        margin: 2rem 0 0 0;
         justify-content: center;
         &:hover{
             @include light-gradient-bckgd;
@@ -26,8 +26,7 @@
 
 /*//BOUTONS COEURS FAVORIS//*/
 .button__heart{
-    @include heart-size;
-    padding-right: 50px;
+    padding-right: 2rem;
     &:hover{
         .fas{
             opacity: 1;
@@ -38,6 +37,7 @@
         
     }
     > .far, .fas{
+        font-size: 1.8rem;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
