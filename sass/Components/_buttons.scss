@@ -6,6 +6,9 @@
         @include light-gradient-bckgd;
         box-shadow: 7px 10px 40px darken($dark-grey,10);
     }
+    @include tablet-p{
+        margin: 1rem;
+    }
 }
 
 /*//PAGES MENUS => BOUTON COMMANDER*/

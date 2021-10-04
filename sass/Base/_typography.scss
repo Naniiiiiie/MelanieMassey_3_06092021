@@ -12,6 +12,9 @@ h2{
    font-size: 1.5rem;
    font-weight: 800;
    margin: 1.5rem 0 0.5rem 0;
+   @include tablet-p{
+    margin: 0.5rem 0;
+   }
 }
 
 h3{
@@ -70,6 +73,13 @@ p{
         font-size: 1rem;
         font-weight: 400;
         margin: 1.5rem 0 0.4rem 0;
+
+        @include tablet-p{
+            text-align: center;
+        }
+        @include desktop{
+            text-align: initial;
+        }
     }
     h4{
         font-family: 'Roboto';

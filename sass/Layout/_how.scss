@@ -15,6 +15,12 @@
         background-color: $light-grey;
         border-radius: 1.2rem;
         @include shadow;
+
+        @include tablet-p{
+            height: 4rem;
+            width: 85%;
+            margin: 0 auto;
+        }
         &--listnb{
             display: flex;
             justify-content: center;
@@ -45,6 +51,12 @@
     }
     &__step > p{
         font-weight: bold;
+    }
+    @include tablet-p{
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem 1rem 2rem 1rem;
+        border-radius: 1rem;
     }
     
 }

@@ -1,6 +1,15 @@
 * {
     box-sizing:border-box;
     font-size: 16px;
+    @include tablet-p{
+        font-size: 20px;
+    }
+    @include tablet-l{
+        font-size: 22px;
+    }
+    @include desktop{
+        font-size: 26px;
+    }
 }
 
 body {
@@ -10,6 +19,3 @@ body {
     background: $light-grey;
 }
 
-.menu__courses h2{
-    margin-bottom: 10px;
-}
