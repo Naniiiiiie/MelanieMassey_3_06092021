@@ -13,7 +13,7 @@ h2{
    font-weight: 800;
    margin: 1.5rem 0 0.5rem 0;
    @include tablet-p{
-    margin: 0.5rem 0;
+       margin: 1.5rem 0 0 0;
    }
 }
 
@@ -85,11 +85,17 @@ p{
         font-family: 'Roboto';
         font-weight: 600;
         color: #000;
+        @include desktop{
+            font-size: 1rem;
+        }
     }
     p{
         font-size: 0.9rem;
         font-weight: 400;
         margin-top: 0.2rem;
+        @include desktop{
+            font-size: 0.8rem;
+        }
     }
     span{
         font-size: 1rem;

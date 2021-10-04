@@ -192,9 +192,9 @@ a {
   }
 }
 
-@media screen and (min-width: 1400) {
+@media screen and (min-width: 1400px) {
   * {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 
@@ -223,7 +223,7 @@ h2 {
 
 @media screen and (min-width: 768px) {
   h2 {
-    margin: 0.5rem 0;
+    margin: 1.5rem 0 0 0;
   }
 }
 
@@ -290,7 +290,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1400) {
+@media screen and (min-width: 1400px) {
   .menu h3 {
     text-align: initial;
   }
@@ -302,10 +302,22 @@ p {
   color: #000;
 }
 
+@media screen and (min-width: 1400px) {
+  .menu h4 {
+    font-size: 1rem;
+  }
+}
+
 .menu p {
   font-size: 0.9rem;
   font-weight: 400;
   margin-top: 0.2rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .menu p {
+    font-size: 0.8rem;
+  }
 }
 
 .menu span {
@@ -377,11 +389,26 @@ p {
           justify-content: center;
 }
 
+@media screen and (min-width: 1400px) {
+  .menu__button--order {
+    width: 30%;
+    font-weight: 600;
+  }
+}
+
 .menu__button--order:hover {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
   background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
   -webkit-box-shadow: 7px 10px 40px #b5b5b5;
           box-shadow: 7px 10px 40px #b5b5b5;
+}
+
+@media screen and (min-width: 1400px) {
+  .menu__button {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
 }
 
 /*//BOUTONS COEURS FAVORIS//*/
@@ -584,6 +611,12 @@ header .arrow {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .how__step {
+    width: 75%;
+  }
+}
+
 .how__step--listnb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -636,6 +669,12 @@ header .arrow {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .how {
+    width: 50%;
+  }
+}
+
 .restos {
   width: 100%;
   background-color: #f6f6f6;
@@ -661,6 +700,14 @@ header .arrow {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .restos__grid {
+    -ms-grid-columns: (30%)[2];
+        grid-template-columns: repeat(2, 30%);
+    grid-gap: 2rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .restos__grid > h2 {
     -ms-grid-column: 1;
@@ -683,6 +730,12 @@ header .arrow {
   height: 200px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+@media screen and (min-width: 1400px) {
+  .restos__card img {
+    height: 300px;
+  }
 }
 
 .restos__card--info {
@@ -728,6 +781,12 @@ header .arrow {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .coverpic img {
+    height: 400px;
+  }
+}
+
 .menu {
   width: 100%;
   background: #f6f6f6;
@@ -738,14 +797,15 @@ header .arrow {
           transform: translateY(-50px);
 }
 
-@media screen and (min-width: 1400) {
+@media screen and (min-width: 1400px) {
   .menu {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1rem;
+    grid-column-gap: 2.5rem;
     width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -770,11 +830,14 @@ header .arrow {
   }
 }
 
-@media screen and (min-width: 1400) {
+@media screen and (min-width: 1400px) {
   .menu__title {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1/4;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -794,11 +857,12 @@ header .arrow {
   }
 }
 
-@media screen and (min-width: 1400) {
+@media screen and (min-width: 1400px) {
   .menu__courses--border {
     width: 2.5rem;
     border-bottom: 3px solid #99E2D0;
     margin-bottom: 0.5rem;
+    margin: initial;
   }
 }
 
@@ -903,7 +967,7 @@ header .arrow {
   }
 }
 
-@media screen and (min-width: 1400) {
+@media screen and (min-width: 1400px) {
   .menu__courses {
     width: 100%;
     margin: 0 auto;
