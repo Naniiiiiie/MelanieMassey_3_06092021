@@ -8,25 +8,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loader--disapear 1s both ease 3.5s;
+    animation: loader--disappear 1s both ease 3.5s;
+    &--firstdot{
+        position: relative;
+    }
     .dot{
-        position: absolute;
-        width: 100px;
-        height: 100px;
+        width: 25px;
+        height: 25px;
         margin: 0 10px;
         border-radius: 50%;
-        transform: scale(0);
-        animation: dot 1.5s both ease-in-out alternate 2;
-        &:nth-child(1){
-            background-color: $primary-color;
+        display: flex;
+        justify-content: center;
+        background: $tertiary-color;
+        &--1{
+            position: absolute;
+            left: 0px;
+            transform: scale(0);
+            animation: dot--appear 1.5s both ease-in-out 2;
         }
-        &:nth-child(2){
-            background-color: $secondary-color;
-            animation-delay: 0.2s;
+        &--2{
+            transform: scale(1);
+            animation: dot--translate 1.5s both ease-in-out 2;
         }
-        &:nth-child(3){
-            background-color: $tertiary-color;
-            animation-delay: 0.4s;
+        &--3{
+            transform: scale(1);
+            animation: dot--translate 1.5s both ease-in-out 2;
+        }
+        &--4{
+            transform: scale(1);
+            animation: dot--disappear 1.5s both ease-in-out 2;
         }
     }
 }

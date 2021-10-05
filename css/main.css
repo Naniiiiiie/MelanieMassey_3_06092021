@@ -16,7 +16,7 @@ a {
 /*MINI BORDURE PAGES MENUS*/
 /*MEDIAS QUERIES*/
 /*LOADING SPINNER*/
-@-webkit-keyframes dot {
+@-webkit-keyframes dot--appear {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -26,7 +26,7 @@ a {
             transform: scale(1);
   }
 }
-@keyframes dot {
+@keyframes dot--appear {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -37,14 +37,58 @@ a {
   }
 }
 
-@-webkit-keyframes loader--disapear {
+@-webkit-keyframes dot--disappear {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes dot--disappear {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes dot--translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(45px);
+            transform: translateX(45px);
+  }
+}
+
+@keyframes dot--translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(45px);
+            transform: translateX(45px);
+  }
+}
+
+@-webkit-keyframes loader--disappear {
   100% {
     opacity: 0;
     z-index: -999;
   }
 }
 
-@keyframes loader--disapear {
+@keyframes loader--disappear {
   100% {
     opacity: 0;
     z-index: -999;
@@ -463,36 +507,56 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: loader--disapear 1s both ease 3.5s;
-          animation: loader--disapear 1s both ease 3.5s;
+  -webkit-animation: loader--disappear 1s both ease 3.5s;
+          animation: loader--disappear 1s both ease 3.5s;
+}
+
+.loader--firstdot {
+  position: relative;
 }
 
 .loader .dot {
-  position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 25px;
+  height: 25px;
   margin: 0 10px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #99E2D0;
+}
+
+.loader .dot--1 {
+  position: absolute;
+  left: 0px;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation: dot 1.5s both ease-in-out alternate 2;
-          animation: dot 1.5s both ease-in-out alternate 2;
+  -webkit-animation: dot--appear 1.5s both ease-in-out 2;
+          animation: dot--appear 1.5s both ease-in-out 2;
 }
 
-.loader .dot:nth-child(1) {
-  background-color: #9356DC;
+.loader .dot--2 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: dot--translate 1.5s both ease-in-out 2;
+          animation: dot--translate 1.5s both ease-in-out 2;
 }
 
-.loader .dot:nth-child(2) {
-  background-color: #FF79DA;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+.loader .dot--3 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: dot--translate 1.5s both ease-in-out 2;
+          animation: dot--translate 1.5s both ease-in-out 2;
 }
 
-.loader .dot:nth-child(3) {
-  background-color: #99E2D0;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+.loader .dot--4 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: dot--disappear 1.5s both ease-in-out 2;
+          animation: dot--disappear 1.5s both ease-in-out 2;
 }
 
 header {
