@@ -758,16 +758,14 @@ header .arrow {
 
 @media screen and (min-width: 768px) {
   .restos__grid {
-    -ms-grid-columns: (40%)[2];
-        grid-template-columns: repeat(2, 40%);
+    grid-template-columns: repeat(2, 40%);
     grid-gap: 1rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .restos__grid {
-    -ms-grid-columns: (30%)[2];
-        grid-template-columns: repeat(2, 30%);
+    grid-template-columns: repeat(2, 30%);
     grid-gap: 2rem;
   }
 }
@@ -865,8 +863,7 @@ header .arrow {
   .menu {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 2.5rem;
     width: 100%;
     margin: 0 auto;
