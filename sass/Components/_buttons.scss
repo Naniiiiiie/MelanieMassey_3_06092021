@@ -46,15 +46,12 @@
         .far{
             opacity: 0;
         }
-        
     }
     > .far, .fas{
         font-size: 1.8rem;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-    }
-    > .far{
         transition: opacity, 1000ms;
     }
     > .fas{
@@ -62,6 +59,5 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0;
-        transition: opacity, 1000ms;
     }
 }

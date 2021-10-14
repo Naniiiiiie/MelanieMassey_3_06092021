@@ -147,6 +147,28 @@ a {
   }
 }
 
+@-webkit-keyframes check__icon--rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes check__icon--rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
 @-webkit-keyframes price_slide {
   0% {
     -webkit-transform: translateX(0);
@@ -174,16 +196,7 @@ a {
     padding-right: 0;
   }
   100% {
-    padding-right: 4rem;
-  }
-}
-
-@keyframes card_slide {
-  0% {
-    padding-right: 0;
-  }
-  100% {
-    padding-right: 4rem;
+    padding-right: 5rem;
   }
 }
 
@@ -193,28 +206,6 @@ a {
   }
   100% {
     padding-right: 5rem;
-  }
-}
-
-@-webkit-keyframes check__icon--rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-@keyframes check__icon--rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
   }
 }
 
@@ -474,9 +465,6 @@ p {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.button__heart > .far {
   -webkit-transition: opacity, 1000ms;
   transition: opacity, 1000ms;
 }
@@ -487,8 +475,6 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  -webkit-transition: opacity, 1000ms;
-  transition: opacity, 1000ms;
 }
 
 .loader {
@@ -532,29 +518,21 @@ p {
 .loader .dot--1 {
   position: absolute;
   left: 0px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
   -webkit-animation: dot--appear 1.5s both ease-in-out 2;
           animation: dot--appear 1.5s both ease-in-out 2;
 }
 
 .loader .dot--2 {
-  -webkit-transform: scale(1);
-          transform: scale(1);
   -webkit-animation: dot--translate 1.5s both ease-in-out 2;
           animation: dot--translate 1.5s both ease-in-out 2;
 }
 
 .loader .dot--3 {
-  -webkit-transform: scale(1);
-          transform: scale(1);
   -webkit-animation: dot--translate 1.5s both ease-in-out 2;
           animation: dot--translate 1.5s both ease-in-out 2;
 }
 
 .loader .dot--4 {
-  -webkit-transform: scale(1);
-          transform: scale(1);
   -webkit-animation: dot--disappear 1.5s both ease-in-out 2;
           animation: dot--disappear 1.5s both ease-in-out 2;
 }
@@ -758,14 +736,16 @@ header .arrow {
 
 @media screen and (min-width: 768px) {
   .restos__grid {
-    grid-template-columns: repeat(2, 40%);
+    -ms-grid-columns: (40%)[2];
+        grid-template-columns: repeat(2, 40%);
     grid-gap: 1rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .restos__grid {
-    grid-template-columns: repeat(2, 30%);
+    -ms-grid-columns: (30%)[2];
+        grid-template-columns: repeat(2, 30%);
     grid-gap: 2rem;
   }
 }
@@ -863,7 +843,8 @@ header .arrow {
   .menu {
     display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 2.5rem;
     width: 100%;
     margin: 0 auto;
@@ -994,11 +975,6 @@ header .arrow {
   font-size: 1.5rem;
 }
 
-.menu__courses--card:hover h4, .menu__courses--card:hover p {
-  -webkit-animation: card_slide 0.5s both;
-          animation: card_slide 0.5s both;
-}
-
 .menu__courses--card:hover .check__container {
   -webkit-animation: check__container--appear 0.5s both;
           animation: check__container--appear 0.5s both;
@@ -1012,6 +988,11 @@ header .arrow {
 .menu__courses--card:hover span {
   -webkit-animation: price_slide 0.5s both;
           animation: price_slide 0.5s both;
+}
+
+.menu__courses--card:hover h4, .menu__courses--card:hover p {
+  -webkit-animation: card_slide 0.5s both;
+          animation: card_slide 0.5s both;
 }
 
 @media screen and (min-width: 768px) {

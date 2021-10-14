@@ -23,19 +23,15 @@
         &--1{
             position: absolute;
             left: 0px;
-            transform: scale(0);
             animation: dot--appear 1.5s both ease-in-out 2;
         }
         &--2{
-            transform: scale(1);
             animation: dot--translate 1.5s both ease-in-out 2;
         }
         &--3{
-            transform: scale(1);
             animation: dot--translate 1.5s both ease-in-out 2;
         }
         &--4{
-            transform: scale(1);
             animation: dot--disappear 1.5s both ease-in-out 2;
         }
     }

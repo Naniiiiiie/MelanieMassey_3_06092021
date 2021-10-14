@@ -101,10 +101,6 @@
                 }
             }
             &:hover{
-                h4, p{
-                    animation: card_slide 0.5s both;
-                
-                }
                 .check__container{
                     animation: check__container--appear 0.5s both;
                 }
@@ -113,6 +109,10 @@
                 }
                 span{
                     animation: price_slide 0.5s both;
+                }
+                h4, p{
+                    animation: card_slide 0.5s both;
+                
                 }
             }
         }
